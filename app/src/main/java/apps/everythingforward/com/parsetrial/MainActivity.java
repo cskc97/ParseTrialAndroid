@@ -70,4 +70,8 @@ public class MainActivity extends AppCompatActivity {
     {
         startActivity(new Intent(MainActivity.this,Main2Activity.class));
     }
+    @OnClick(R.id.button4)void onList()
+    {
+        startActivity(new Intent(MainActivity.this,Main3Activity.class));
+    }
 }

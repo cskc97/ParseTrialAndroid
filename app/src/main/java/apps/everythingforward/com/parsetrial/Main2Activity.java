@@ -15,9 +15,9 @@ import butterknife.OnClick;
 public class Main2Activity extends AppCompatActivity {
 
     @BindView(R.id.editText)EditText text;
-    String taskColumn = "Tasks";
-    String taskKey = "task";
-    String userKey = "user";
+    public static String taskColumn = "Tasks";
+    public static String taskKey = "task";
+    public static String userKey = "user";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
