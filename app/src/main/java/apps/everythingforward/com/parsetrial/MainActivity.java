@@ -9,6 +9,9 @@ import com.parse.Parse;
 import com.parse.ParseUser;
 import com.parse.ui.ParseLoginBuilder;
 
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
 public class MainActivity extends AppCompatActivity {
 
     public static final int LOGIN_CODE=0;
@@ -18,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ButterKnife.bind(this);
 
         ParseUser.logOut();
         ParseLoginBuilder builder = new ParseLoginBuilder(MainActivity.this);
@@ -59,5 +64,10 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
+    }
+
+    @OnClick(R.id.button5) public void addTask()
+    {
+        startActivity(new Intent(MainActivity.this,Main2Activity.class));
     }
 }
